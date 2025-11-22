@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -32,8 +33,22 @@ func main() {
 		log.Fatal("Error fetching leaderboard:", err)
 	}
 
+	// Load Theme
+	theme := table.Theme{
+		Bar: table.BarConfig{Filled: "#", Empty: "."},
+		Emoticons: []table.EmoticonConfig{
+			{Threshold: 0, Icon: "(╯°□°)╯︵ ┻━┻"},
+		},
+	}
+	themeData, err := os.ReadFile("config/theme.json")
+	if err == nil {
+		json.Unmarshal(themeData, &theme)
+	} else {
+		log.Println("Warning: config/theme.json not found, using default theme")
+	}
+
 	// Generate ASCII table
-	table := table.Generate(leaderboard)
+	asciiTable := table.Generate(leaderboard, theme)
 
 	// Update README.md
 	readmePath := "README.md"
@@ -73,7 +88,7 @@ func main() {
 	}
 
 	newContent := ""
-	tableSection := fmt.Sprintf("%s\n\n%s\n%s", marker, table, endMarker)
+	tableSection := fmt.Sprintf("%s\n\n%s\n%s", marker, asciiTable, endMarker)
 
 	if startIdx != -1 && endIdx != -1 {
 		// Replace existing section

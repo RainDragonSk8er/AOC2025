@@ -1,0 +1,32 @@
+{
+    "bar": {
+        "filled": "#",
+        "empty": "-"
+    },
+    "emoticons": [
+        {
+            "threshold": 0,
+            "icon": "(╯°□°)╯︵ ┻━┻"
+        },
+        {
+            "threshold": 5,
+            "icon": "(ㆆ _ ㆆ)"
+        },
+        {
+            "threshold": 9,
+            "icon": "(._.)"
+        },
+        {
+            "threshold": 13,
+            "icon": "(•_•)"
+        },
+        {
+            "threshold": 17,
+            "icon": "(˵ ͡° ͜ʖ ͡°˵)"
+        },
+        {
+            "threshold": 21,
+            "icon": "※\\(⌐■_■)\/※"
+        }
+    ]
+}

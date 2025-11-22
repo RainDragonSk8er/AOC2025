@@ -1,1 +1,5 @@
 .git-credentials
+THEME_PREVIEW.md
+bin/
+.env
+solutions/Testfile.py

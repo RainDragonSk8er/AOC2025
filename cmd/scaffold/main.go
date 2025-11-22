@@ -3,14 +3,12 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"log"
 	"os"
-	"path/filepath"
-	"strings"
 	"time"
 
 	"github.com/RainDragonSk8er/AOC2025/pkg/aoc"
+	"github.com/RainDragonSk8er/AOC2025/pkg/scaffold"
 	"github.com/joho/godotenv"
 )
 
@@ -67,80 +65,9 @@ func main() {
 		log.Fatal("Error fetching leaderboard:", err)
 	}
 
-	// Create day directory
-	dayDir := fmt.Sprintf("solutions/day%02d", targetDay)
-	if err := os.MkdirAll(dayDir, 0755); err != nil {
-		log.Fatal("Error creating day directory:", err)
+	// Run scaffolding
+	// We use "." as rootDir since we are running from the project root
+	if err := scaffold.Run(".", targetDay, leaderboard, mapping); err != nil {
+		log.Fatal(err)
 	}
-
-	// Iterate members
-	for _, member := range leaderboard.Members {
-		name := "Anonymous"
-		if member.Name != nil {
-			name = *member.Name
-		}
-
-		folderName := name
-		if mapped, ok := mapping[name]; ok {
-			folderName = mapped
-		}
-		// Sanitize folder name
-		folderName = strings.ReplaceAll(folderName, " ", "_")
-		folderName = strings.ReplaceAll(folderName, "/", "_")
-
-		memberDir := filepath.Join(dayDir, folderName)
-		if err := os.MkdirAll(memberDir, 0755); err != nil {
-			log.Printf("Error creating directory for %s: %v", name, err)
-			continue
-		}
-
-		// Smart Language Detection
-		extensions := detectPreviousLanguage(targetDay, folderName)
-		if len(extensions) == 0 {
-			extensions = []string{".md"} // Default
-		}
-
-		for _, ext := range extensions {
-			filename := "main" + ext
-			filePath := filepath.Join(memberDir, filename)
-			if _, err := os.Stat(filePath); os.IsNotExist(err) {
-				content := ""
-				if ext == ".md" {
-					content = fmt.Sprintf("# Solution for Day %d\n\nTODO: Write solution", targetDay)
-				} else {
-					content = fmt.Sprintf("// Solution for Day %d", targetDay)
-				}
-				os.WriteFile(filePath, []byte(content), 0644)
-				fmt.Printf("Created %s\n", filePath)
-			}
-		}
-	}
-}
-
-func detectPreviousLanguage(currentDay int, folderName string) []string {
-	if currentDay <= 1 {
-		return nil
-	}
-	prevDayDir := fmt.Sprintf("solutions/day%02d/%s", currentDay-1, folderName)
-	files, err := os.ReadDir(prevDayDir)
-	if err != nil {
-		return nil
-	}
-
-	knownExts := map[string]bool{
-		".py": true, ".go": true, ".rs": true, ".js": true, ".ts": true,
-		".cpp": true, ".c": true, ".java": true, ".rb": true, ".lua": true,
-		".jl": true,
-	}
-
-	var found []string
-	for _, file := range files {
-		if !file.IsDir() {
-			ext := filepath.Ext(file.Name())
-			if knownExts[ext] {
-				found = append(found, ext)
-			}
-		}
-	}
-	return found
 }
