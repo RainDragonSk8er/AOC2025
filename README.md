@@ -19,16 +19,3 @@ My collaborative repo for Advent of Code 2025!
 
 Leaderboard will be revealed on December 1st!
 <!-- LEADERBOARD_END -->
-
-## Leaderboard
-<!-- LEADERBOARD_START -->
-
-| Rank | Name | Stars | Local Score |
-| :--- | :--- | :---: | :---: |
-| 1 | Hallvard Holme | 0 | 0 |
-| 2 | Kristian Holme | 0 | 0 |
-| 3 | RainDragonSk8er | 0 | 0 |
-| 4 | hhaustreis | 0 | 0 |
-| 5 | taholme | 0 | 0 |
-
-<!-- LEADERBOARD_END -->
