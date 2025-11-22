@@ -4,8 +4,13 @@
 # We assume the user mounts their .gitconfig or we set basic config here
 git config --global user.email "aoc-bot@example.com"
 git config --global user.name "AOC Bot"
-git config --global credential.helper store
+git config --global credential.helper 'store --file=/root/.git-credentials'
 
+if [ ! -f /root/.git-credentials ]; then
+    echo "WARNING: /root/.git-credentials not found!"
+else
+    echo "Found /root/.git-credentials"
+fi
 # Add safe directory
 git config --global --add safe.directory /home/jho/Code/AOC2025
 # Also add the current directory just in case we mount it differently
