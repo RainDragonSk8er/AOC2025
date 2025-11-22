@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Service to run system tests
+  tests:
+    image: golang:alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - go-modules:/go/pkg/mod
+    # Install git/gcc if needed by dependencies (CGO is usually off for alpine but let's be safe)
+    # We run tests and exit.
+    command: sh -c "go test -v ./tests/... ./pkg/..."
+
+  # Main Tracker Service
+  tracker:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: aoc-tracker
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - ./.git-credentials:/root/.git-credentials
+    env_file:
+      - .env
+    # Only start tracker if tests pass
+    depends_on:
+      tests:
+        condition: service_completed_successfully
+
+volumes:
+  go-modules:
