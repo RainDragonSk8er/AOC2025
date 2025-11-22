@@ -12,3 +12,17 @@ My collaborative repo for Advent of Code 2025!
 * I hope to full start AOC2025, after a lackluster finishing rate in AOC2023. I make no guarantee that i will finish by the 12th, but i will aim to complete all of the challenges before or during january 2026!
 
 ***Good Coding!***
+
+
+## Leaderboard
+<!-- LEADERBOARD_START -->
+
+| Rank | Name | Stars | Local Score |
+| :--- | :--- | :---: | :---: |
+| 1 | Hallvard Holme | 0 | 0 |
+| 2 | Kristian Holme | 0 | 0 |
+| 3 | RainDragonSk8er | 0 | 0 |
+| 4 | hhaustreis | 0 | 0 |
+| 5 | taholme | 0 | 0 |
+
+<!-- LEADERBOARD_END -->
