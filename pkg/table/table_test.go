@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/RainDragonSk8er/AOC2025/pkg/aoc"
 )
@@ -56,7 +57,9 @@ func TestGenerate(t *testing.T) {
 		},
 	}
 
-	output := Generate(&leaderboard, theme)
+	// Mock time as Dec 1st 2025
+	mockTime := time.Date(2025, time.December, 1, 0, 0, 0, 0, time.UTC)
+	output := Generate(&leaderboard, theme, mockTime)
 
 	// Expected output should contain diff syntax and progress bars
 	// Since we are running this test in Nov 2025 (presumably), it might return the "revealed" message.

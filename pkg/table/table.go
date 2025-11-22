@@ -25,11 +25,9 @@ type EmoticonConfig struct {
 }
 
 // Generate creates a markdown ASCII table from the leaderboard data.
-func Generate(l *aoc.JSONResponse, theme Theme) string {
+func Generate(l *aoc.JSONResponse, theme Theme, now time.Time) string {
 	// Date Check: Hide before Dec 1st (unless it's 2024/2025 transition testing, but strict rule requested)
 	// Actually, user said "not be present in the README.md before the first of december".
-	// We can check system time.
-	now := time.Now()
 	if now.Month() != time.December || now.Day() < 1 {
 		// If not December (and not past it, e.g. Jan), hide it.
 		// But we want it to persist in Jan 2026.

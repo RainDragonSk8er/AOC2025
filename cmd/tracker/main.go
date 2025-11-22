@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/RainDragonSk8er/AOC2025/pkg/aoc"
 	"github.com/RainDragonSk8er/AOC2025/pkg/table"
@@ -48,7 +49,7 @@ func main() {
 	}
 
 	// Generate ASCII table
-	asciiTable := table.Generate(leaderboard, theme)
+	asciiTable := table.Generate(leaderboard, theme, time.Now())
 
 	// Update README.md
 	readmePath := "README.md"
