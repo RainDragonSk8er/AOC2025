@@ -4,6 +4,7 @@
 # We assume the user mounts their .gitconfig or we set basic config here
 git config --global user.email "aoc-bot@example.com"
 git config --global user.name "AOC Bot"
+git config --global credential.helper store
 
 # Add safe directory
 git config --global --add safe.directory /home/jho/Code/AOC2025
@@ -13,7 +14,7 @@ git config --global --add safe.directory /app
 echo "Starting AOC Tracker..."
 
 # Run immediately on start
-./run_update.sh
+run_update.sh
 
 # Loop to run every hour
 # We use crond logic or just a simple sleep loop.
@@ -24,5 +25,5 @@ while true; do
     echo "Sleeping for 1 hour..."
     sleep 3600
     echo "Running update..."
-    ./run_update.sh
+    run_update.sh
 done

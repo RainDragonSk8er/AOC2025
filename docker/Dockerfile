@@ -14,15 +14,19 @@ RUN apk add --no-cache git openssh-client tzdata
 ENV TZ=Europe/Oslo
 
 WORKDIR /app
-COPY --from=builder /app/tracker .
-COPY --from=builder /app/scaffold .
-COPY --from=builder /app/scripts/run_update.sh .
-COPY --from=builder /app/entrypoint.sh .
+
+# Copy binaries to /usr/local/bin
+COPY --from=builder /app/tracker /usr/local/bin/tracker
+COPY --from=builder /app/scaffold /usr/local/bin/scaffold
+
+# Copy scripts to /usr/local/bin
+COPY --from=builder /app/scripts/run_update.sh /usr/local/bin/run_update.sh
+COPY --from=builder /app/docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Make sure scripts are executable
-RUN chmod +x entrypoint.sh run_update.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh /usr/local/bin/run_update.sh
 
 # Create a place for git config
 RUN mkdir -p /root/.ssh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
