@@ -19,3 +19,9 @@ My collaborative repo for Advent of Code 2025!
 
 Leaderboard will be revealed on December 1st!
 <!-- LEADERBOARD_END -->
+
+## Leaderboard
+<!-- LEADERBOARD_START -->
+
+Leaderboard will be revealed on December 1st!
+<!-- LEADERBOARD_END -->
