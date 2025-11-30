@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# 0. Update Repo
+git pull
+
 # 1. Run Scaffolder (Auto-detects date)
 # It will only create files if today is Nov 30 or Dec 1-12
 scaffold
