@@ -17,5 +17,27 @@ My collaborative repo for Advent of Code 2025!
 ## Leaderboard
 <!-- LEADERBOARD_START -->
 
-Leaderboard will be revealed on December 1st!
+```diff
+! --- Advent of Code 2025 Leaderboard ---
+
++ Hallvard Holme
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
++ Kristian Holme
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
++ Lioncookie2
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
++ RainDragonSk8er
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
++ hhaustreis
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
++ taholme
+! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
+
+```
+
 <!-- LEADERBOARD_END -->
