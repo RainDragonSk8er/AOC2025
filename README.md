@@ -29,13 +29,13 @@ My collaborative repo for Advent of Code 2025!
 + Kristian Holme
 ! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
 
++ hhaustreis
+! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
+
 + Hallvard Holme
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
 + Lioncookie2
-! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
-
-+ hhaustreis
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
 ```
