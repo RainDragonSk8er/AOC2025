@@ -26,10 +26,10 @@ My collaborative repo for Advent of Code 2025!
 + RainDragonSk8er
 ! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
 
-+ Hallvard Holme
-! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
-
 + Kristian Holme
+! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
+
++ Hallvard Holme
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
 + Lioncookie2
