@@ -20,6 +20,9 @@ My collaborative repo for Advent of Code 2025!
 ```diff
 ! --- Advent of Code 2025 Leaderboard ---
 
++ RainDragonSk8er
+! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
+
 + Hallvard Holme
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
@@ -27,9 +30,6 @@ My collaborative repo for Advent of Code 2025!
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
 + Lioncookie2
-! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
-
-+ RainDragonSk8er
 ! [------------------------] 0 Stars (╯°□°)╯︵ ┻━┻
 
 + hhaustreis
