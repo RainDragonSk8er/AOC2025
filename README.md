@@ -24,7 +24,7 @@ My collaborative repo for Advent of Code 2025!
 ! [######------------------] 6 Stars (ㆆ _ ㆆ)
 
 + RainDragonSk8er
-! [####--------------------] 4 Stars (╯°□°)╯︵ ┻━┻
+! [#####-------------------] 5 Stars (ㆆ _ ㆆ)
 
 + taholme
 ! [####--------------------] 4 Stars (╯°□°)╯︵ ┻━┻
