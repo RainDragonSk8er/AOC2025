@@ -23,11 +23,11 @@ My collaborative repo for Advent of Code 2025!
 + Kristian Holme
 ! [############------------] 12 Stars (._.)
 
-+ RainDragonSk8er
-! [#####-------------------] 5 Stars (ㆆ _ ㆆ)
-
 + taholme
-! [#####-------------------] 5 Stars (ㆆ _ ㆆ)
+! [########----------------] 8 Stars (ㆆ _ ㆆ)
+
++ RainDragonSk8er
+! [######------------------] 6 Stars (ㆆ _ ㆆ)
 
 + hhaustreis
 ! [#-----------------------] 1 Stars (╯°□°)╯︵ ┻━┻
