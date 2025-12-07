@@ -21,7 +21,7 @@ My collaborative repo for Advent of Code 2025!
 ! --- Advent of Code 2025 Leaderboard ---
 
 + Kristian Holme
-! [############------------] 12 Stars (._.)
+! [#############-----------] 13 Stars (•_•)
 
 + taholme
 ! [#########---------------] 9 Stars (._.)
